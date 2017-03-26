@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% import "macros.html" as macros %}
+{% block title %}{% endblock %}
+
+{% block body %}
+
+{{ macros.display_header() }}
+
+<section>
+	<form enctype="application/json" action="/login" method="post">
+	    <input type="text" name="username" value="1@test.com">
+	    <input type="password" name="password" value="test">
+	    <input type="submit" value="Log in">
+	</form>
+</section>
+
+{{ macros.display_footer() }}
+
+{% endblock %}
