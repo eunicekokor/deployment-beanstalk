@@ -9,7 +9,7 @@ import stripe
 import requests
 
 #MUST CHANGE WHEN CLIENT APP DEPLOYED
-CLIENT_CHARGE_URL="http://eunicekokor.localhost.run/charge"
+# CLIENT_CHARGE_URL="http://eunicekokor.localhost.run/charge"
 application = create_app()
 application.config.from_object('config')
 boto_session = boto3.session.Session(aws_access_key_id=application.config['AWS_ACCESS_KEY_ID'], aws_secret_access_key=application.config['AWS_SECRET_ACCESS_KEY'])
@@ -21,10 +21,16 @@ stripe_keys = {
 
 stripe.api_key = stripe_keys['secret_key']
 
+# @application.route('/charge', methods=['GET'])
+# def thanks():
+@application.route('/', methods=['GET'])
+def index():
+  return "HelloWorld"
+
 @application.route('/charge', methods=['POST'])
 def charge():
     print "REQUEST {}".format(request.form)
-    print "STRIPECONFIG {}".format(stripe.api_key)
+    print "STRIPECONFIG {}\n\n".format(stripe.api_key)
 
     amount = int(request.form['amount'])
     count = int(db.Table('Transactions').scan()['Count'])
@@ -42,7 +48,7 @@ def charge():
     )
 
     i = datetime.now()
-
+    print "response"
     response = db.Table('Transactions').put_item(
 	   Item={
 	        'trans_id': count + 1,
@@ -52,11 +58,15 @@ def charge():
 	        'date': i.strftime('%Y/%m/%d %H:%M:%S'),
 	        'item_id': request.form['item_id']
 	    }
-	)
-    post_info = {'amount':amount}
+	   )
 
-    requests.post(CLIENT_CHARGE_URL, data=post_info)
-    return json.dumps({"amount":amount})
+    print "AMOUNT {}\n".format(amount)
+    post_info = {'amount':amount}
+    CLIENT_CHARGE_URL="http://flask-env-client.xykuphpmsf.us-west-2.elasticbeanstalk.com/charge?amount={}".format(amount)
+    # we can also do return a response with all the data like here http://stackoverflow.com/questions/42098396/redirect-to-external-url-while-sending-a-json-object-or-string-from-flask-app
+    return redirect(CLIENT_CHARGE_URL)
+    # requests.post(CLIENT_CHARGE_URL, data=post_info)
+    # return json.dumps({"amount":amount})
 
 
 
