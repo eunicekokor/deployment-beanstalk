@@ -1,0 +1,10 @@
+{
+  "output_folder": "css/gen/",
+  "depends": ["scss/*.scss"],
+  "rules": {
+    "scss_all": {
+      "output": "all.css",
+      "inputs": ["scss/client.scss"]
+    }
+  }
+}
