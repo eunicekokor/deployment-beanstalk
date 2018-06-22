@@ -1,0 +1,20 @@
+{% extends "base.html" %} {% import "macros.html" as macros %} {% block title %}{% endblock %} {% block body %} {{ macros.display_header() }}
+<section>
+    <a href="/storeItem"> View Store </a>
+    <h1> Transactions </h1>
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Amount</th>
+            <th> Item Id </th>
+        </tr>
+        {% for t in transactions %}
+        <tr>
+            <td>{{t['date']}}</td>
+            <td>{{t['amount']}}</td>
+            <td>{{t['item_id']}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</section>
+{{ macros.display_footer() }} {% endblock %}

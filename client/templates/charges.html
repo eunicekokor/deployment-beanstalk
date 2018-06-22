@@ -1,0 +1,12 @@
+{% extends "base.html" %} {% import "macros.html" as macros %} {% block title %}{% endblock %} {% block body %} {{ macros.display_header() }}
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<center>
+    <h1>Thank You For Your Business</h1>
+    <h2>you paid <h1><b>{{amount}}</b></h1> dollars!</h2>
+</center>
+{{ macros.display_footer() }} {% endblock %}

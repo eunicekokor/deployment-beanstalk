@@ -1,0 +1,225 @@
+ /* Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+--------------------------------------------------------------------------------------- */
+/* line 3, /Users/Ray/Documents/Programming/StripeMugs/app/static/scss/lib/reset.min.scss */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* line 3, /Users/Ray/Documents/Programming/StripeMugs/app/static/scss/lib/reset.min.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 3, /Users/Ray/Documents/Programming/StripeMugs/app/static/scss/lib/reset.min.scss */
+body {
+  line-height: 1;
+}
+
+/* line 3, /Users/Ray/Documents/Programming/StripeMugs/app/static/scss/lib/reset.min.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 3, /Users/Ray/Documents/Programming/StripeMugs/app/static/scss/lib/reset.min.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 3, /Users/Ray/Documents/Programming/StripeMugs/app/static/scss/lib/reset.min.scss */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 3, /Users/Ray/Documents/Programming/StripeMugs/app/static/scss/lib/reset.min.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 10, /Users/Ray/Documents/Programming/StripeMugs/app/static/scss/_typography.scss */
+h1 {
+  font-size: 2.25rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  margin-bottom: 2.5rem;
+}
+
+/* line 17, /Users/Ray/Documents/Programming/StripeMugs/app/static/scss/_typography.scss */
+h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 4px;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* line 26, /Users/Ray/Documents/Programming/StripeMugs/app/static/scss/_typography.scss */
+h3 {
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
+}
+
+/* line 31, /Users/Ray/Documents/Programming/StripeMugs/app/static/scss/_typography.scss */
+h4 {
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+/* line 36, /Users/Ray/Documents/Programming/StripeMugs/app/static/scss/_typography.scss */
+h5 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+/* line 41, /Users/Ray/Documents/Programming/StripeMugs/app/static/scss/_typography.scss */
+p, .p {
+  font-size: 1rem;
+}
+
+/* line 45, /Users/Ray/Documents/Programming/StripeMugs/app/static/scss/_typography.scss */
+strong {
+  font-weight: 500;
+}
+
+@media screen and (max-width: 640px) {
+  /* line 50, /Users/Ray/Documents/Programming/StripeMugs/app/static/scss/_typography.scss */
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  /* line 54, /Users/Ray/Documents/Programming/StripeMugs/app/static/scss/_typography.scss */
+  h4 {
+    font-size: 1.5rem;
+  }
+}
+/* line 1, /Users/Ray/Documents/Programming/StripeMugs/app/static/scss/_base.scss */
+html, body {
+  background-color: #FFFFFF;
+  color: #222222;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  height: 100%;
+  line-height: 1.5;
+  position: relative;
+}
+
+/* line 12, /Users/Ray/Documents/Programming/StripeMugs/app/static/scss/_base.scss */
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+/* line 16, /Users/Ray/Documents/Programming/StripeMugs/app/static/scss/_base.scss */
+a, a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* line 21, /Users/Ray/Documents/Programming/StripeMugs/app/static/scss/_base.scss */
+img {
+  max-width: 100%;
+}
+
+/* line 3, /Users/Ray/Documents/Programming/StripeMugs/app/static/scss/_layout.scss */
+.content {
+  margin: 0 auto;
+  max-width: 58.75rem;
+  padding: 0 0.625rem;
+  width: 90%;
+}
+/* line 26, /Users/Ray/Documents/Programming/StripeMugs/app/static/scss/_base.scss */
+.content:after {
+  clear: both;
+  content: ' ';
+  display: block;
+}
+
+@media screen and (max-width: 640px) {
+  /* line 12, /Users/Ray/Documents/Programming/StripeMugs/app/static/scss/_layout.scss */
+  .content {
+    padding: 0;
+    width: 100%;
+  }
+
+  /* line 17, /Users/Ray/Documents/Programming/StripeMugs/app/static/scss/_layout.scss */
+  section {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+@media screen and (min-width: 1921px) {
+  /* line 2, /Users/Ray/Documents/Programming/StripeMugs/app/static/scss/_responsive.scss */
+  html, body {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1920px) {
+  /* line 8, /Users/Ray/Documents/Programming/StripeMugs/app/static/scss/_responsive.scss */
+  html, body {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  /* line 14, /Users/Ray/Documents/Programming/StripeMugs/app/static/scss/_responsive.scss */
+  html, body {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  /* line 20, /Users/Ray/Documents/Programming/StripeMugs/app/static/scss/_responsive.scss */
+  html, body {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 641px) {
+  /* line 26, /Users/Ray/Documents/Programming/StripeMugs/app/static/scss/_responsive.scss */
+  .mobile-only {
+    display: none;
+  }
+}
+@media screen and (max-width: 640px) {
+  /* line 32, /Users/Ray/Documents/Programming/StripeMugs/app/static/scss/_responsive.scss */
+  html, body {
+    font-size: 14px;
+  }
+
+  /* line 36, /Users/Ray/Documents/Programming/StripeMugs/app/static/scss/_responsive.scss */
+  .hide-mobile {
+    display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 42, /Users/Ray/Documents/Programming/StripeMugs/app/static/scss/_responsive.scss */
+  html, body {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 319px) {
+  /* line 48, /Users/Ray/Documents/Programming/StripeMugs/app/static/scss/_responsive.scss */
+  html, body {
+    font-size: 7px;
+  }
+}
+@media screen and (max-width: 240px) {
+  /* line 54, /Users/Ray/Documents/Programming/StripeMugs/app/static/scss/_responsive.scss */
+  html, body {
+    font-size: 5px;
+  }
+}
+/* line 9 */
+h1 {
+  color: #339BF5;
+}
+
+/* line 13 */
+.store-item {
+  text-align: center;
+  margin: 50px;
+}

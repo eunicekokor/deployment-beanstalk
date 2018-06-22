@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% import "macros.html" as macros %}
+{% block title %}{% endblock %}
+
+{% block body %}
+
+{{ macros.display_header() }}
+
+<section>
+	<form enctype="application/json" action="/login" method="post">
+	    <input type="text" name="username" value="testusername">
+	    <input type="password" name="password" value="testpassword">
+	    <input type="submit" value="Log in">
+	</form>
+</section>
+
+<div>Or, create an account below</div>
+
+<section>
+	<form enctype="application/json" action="/join" method="post">
+	    <input type="text" name="username" value="1@test.com">
+	    <input type="password" name="password" value="test">
+	    <input type="submit" value="Create Account">
+	</form>
+</section>
+
+{{ macros.display_footer() }}
+
+{% endblock %}
